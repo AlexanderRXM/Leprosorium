@@ -4,6 +4,14 @@
 	<%= @row['content'] %>
 	<br />
 	<br />
-	Детали: <%= @row['created_date'] %>
-	
+	Добавлено: <%= @row['created_date'] %>
+</p>
+<br />
+<h4>Комментарии:</h4>
+<p>
+	<form action="/details/<%= @row['id'] %>" method="POST" role="form">
+	  <textarea name="content" class="form-control" rows="6" style="width: 400px" placeholder="Введите свой текст"></textarea>
+	  <br />
+	  <button type="submit" class="btn btn-primary">Отправить</button>
+	</form>
 </p>
